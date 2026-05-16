@@ -6,8 +6,6 @@ This project performs Exploratory Data Analysis (EDA) on the Student Exam Perfor
 
 The analysis focuses on study habits, attendance, internet access, parental education, and final exam scores. These factors are used to understand which variables may be related to students’ academic success.
 
----
-
 ## 2. Dataset Description
 
 The dataset contains information about students’ demographic background, study habits, academic behaviour, subject scores, and final exam results.
@@ -43,8 +41,6 @@ Dataset size:
 - Number of rows: 10,000
 - Number of columns: 23
 
----
-
 ## 3. Data Cleaning
 
 The dataset was cleaned before analysis to ensure that the results were accurate and reliable.
@@ -63,11 +59,9 @@ The `study_group` column was created based on whether a student’s daily study 
 
 After cleaning, the dataset was ready for descriptive statistics, pivot tables, charts, and insight generation.
 
----
-
 ## 4. Descriptive Statistics
 
-Descriptive statistics were used to summarize the main numerical variables in the dataset.
+Descriptive statistics were used to summarize the main numerical variables in the dataset, including study hours per day, attendance rate, sleep hours, social media hours, assignment completion rate, final exam score, and previous GPA.
 
 Key summary statistics:
 
@@ -82,9 +76,68 @@ Key summary statistics:
 
 These results show that students generally had a high attendance rate, but their final exam scores varied widely.
 
----
+## 5. Pivot Tables
 
-## 5. Key Insights
+### Pivot Table 1: Average Final Exam Score by Internet Access
+
+The first pivot table compares the average final exam score between students with and without internet access.
+
+Students with internet access achieved an average final exam score of 49.77, while students without internet access achieved an average score of 48.92.
+
+This suggests that internet access may slightly support student learning by helping students access online resources and complete academic tasks more easily. However, the difference is small, so internet access alone may not be the strongest factor affecting exam performance.
+
+### Pivot Table 2: Average Attendance Rate by Pass/Fail Result
+
+The second pivot table compares the average attendance rate between students who passed and students who failed.
+
+Students who passed had an average attendance rate of 85.97%, while students who failed had an average attendance rate of 83.51%.
+
+This shows that students who passed generally had higher attendance than students who failed. Therefore, regular class attendance may be an important factor in academic success.
+
+### Pivot Table 3: Average Final Exam Score by Study Hours Group
+
+The third pivot table compares the average final exam score between students with high study hours and students with low study hours.
+
+Students with high study hours achieved an average final exam score of 55.29, while students with low study hours achieved an average score of 44.10.
+
+This shows that students who spent more time studying each day tended to perform better in the final exam. Therefore, consistent study habits may have a positive relationship with academic performance.
+
+### Pivot Table 4: Average Final Exam Score by Parental Education
+
+The fourth pivot table compares students’ final exam scores based on parental education level.
+
+The average final exam scores were very similar across different parental education levels. Students whose parents had a Bachelor degree achieved an average score of 49.90, while students from High School, Master, and PhD backgrounds had average scores around 49.42 to 49.79.
+
+This suggests that parental education may not be a strong factor in this dataset. Study hours and attendance appear to have a clearer relationship with student performance.
+
+## 6. Visualizations
+
+The project includes the following charts:
+
+- Average Final Exam Score by Internet Access
+- Average Attendance Rate by Pass/Fail Result
+- Average Final Exam Score by Study Hours Group
+- Average Final Exam Score by Parental Education
+
+These visualizations help compare student performance across different categories and make the insights easier to understand.
+
+### Chart 1: Average Final Exam Score by Internet Access
+
+This chart shows the difference in average final exam scores between students with and without internet access. Students with internet access achieved a slightly higher average score than students without internet access.
+
+### Chart 2: Average Attendance Rate by Pass/Fail Result
+
+This chart compares the average attendance rate of students who passed and students who failed. Students who passed had a higher average attendance rate, suggesting that regular attendance may support better academic performance.
+
+### Chart 3: Average Final Exam Score by Study Hours Group
+
+This chart shows the relationship between study hours and final exam performance. Students with high study hours had a much higher average final exam score than students with low study hours.
+
+### Chart 4: Average Final Exam Score by Parental Education
+
+This chart compares students’ final exam scores based on parental education level. The results show that the differences between groups were small, suggesting that parental education may not be the strongest factor affecting final exam performance in this dataset.
+
+## 7. Key Insights
 
 ### Insight 1: Study Hours and Final Exam Score
 
@@ -98,7 +151,7 @@ Students who passed had an average attendance rate of 85.97%, while students who
 
 This indicates that regular class attendance may be an important factor in academic success. Students who attend classes more often are more likely to understand lessons, participate in learning activities, and perform better in exams.
 
-### Insight 3: Internet Access and Academic Performance
+### Insight 3: Internet Access and Final Exam Score
 
 Students with internet access achieved an average final exam score of 49.77, while students without internet access achieved an average score of 48.92.
 
@@ -110,32 +163,17 @@ The average final exam scores were very similar across different parental educat
 
 This suggests that parental education may not be a strong factor in this dataset. Study hours and attendance appear to have a clearer relationship with student performance.
 
----
+## 8. Conclusion
 
-## 6. Visualizations
+Overall, the analysis shows that student exam performance is strongly related to study habits and attendance.
 
-The project includes the following charts:
-
-- Average Final Exam Score by Internet Access
-- Average Attendance Rate by Pass/Fail Result
-- Average Final Exam Score by Study Hours Group
-- Average Final Exam Score by Parental Education
-
-These visualizations help compare student performance across different categories and make the insights easier to understand.
-
----
-
-## 7. Conclusion
-
-Overall, the analysis shows that student exam performance is strongly related to study habits and attendance. Students with high study hours achieved much higher final exam scores than students with low study hours. Students who passed also had a higher average attendance rate than students who failed.
+Students with high study hours achieved much higher final exam scores than students with low study hours. Students who passed also had a higher average attendance rate than students who failed.
 
 Internet access and parental education showed smaller differences in average final exam scores. This suggests that personal study behaviour, especially daily study time and regular attendance, may be stronger factors affecting academic performance in this dataset.
 
----
+## 9. References
 
-## 8. References
-
-GitHub Docs. (n.d.). Get started using GitHub. GitHub. 
+GitHub Docs. (n.d.). Get started using GitHub. GitHub.  
 https://docs.github.com/en/get-started/start-your-journey
 
 MIS 311 dataset. (n.d.). Student Exam Performance dataset provided for MIS 311 Assignment #1.
