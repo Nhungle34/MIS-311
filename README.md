@@ -135,6 +135,7 @@ Internet access and parental education showed smaller differences in average fin
 
 ## 8. References
 
-GitHub Docs. (n.d.). Get started using GitHub. GitHub. https://docs.github.com/en/get-started/start-your-journey
+GitHub Docs. (n.d.). Get started using GitHub. GitHub. 
+https://docs.github.com/en/get-started/start-your-journey
 
 MIS 311 dataset. (n.d.). Student Exam Performance dataset provided for MIS 311 Assignment #1.
