@@ -1,179 +1,160 @@
 # MIS 311 - Student Exam Performance Analysis
 
-## 1. Project Overview
+## Project Overview
 
-This project performs Exploratory Data Analysis (EDA) on the Student Exam Performance dataset. The goal is to understand the dataset, clean the data, explore important patterns, and generate insights about factors that affect students’ academic performance.
+This project is my individual assignment for MIS 311 - Introduction to Business Analytics. I used Microsoft Excel to perform Exploratory Data Analysis on a student exam performance dataset.
 
-The analysis focuses on study habits, attendance, internet access, parental education, and final exam scores. These factors are used to understand which variables may be related to students’ academic success.
+The purpose of this project is to understand which factors may affect students' final exam results. The analysis focuses on study habits, attendance, internet access, parental education, and academic performance.
 
-## 2. Dataset Description
+The main questions of this project are:
 
-The dataset contains information about students’ demographic background, study habits, academic behaviour, subject scores, and final exam results.
+1. Do students with higher study hours achieve better final exam scores?
+2. Do students who pass have higher attendance rates than students who fail?
+3. Does internet access or parental education strongly affect final exam performance?
 
-The dataset includes the following key variables:
+---
 
-- `student_id`: Unique identifier for each student
-- `gender`: Student gender
-- `age`: Age of the student
-- `parental_education`: Highest education level of parents
-- `family_income`: Household income category
-- `internet_access`: Whether the student has internet access
-- `study_environment`: Quality of study environment
-- `study_hours_per_day`: Average daily study time
-- `attendance_rate`: Percentage of class attendance
-- `sleep_hours`: Average hours of sleep per night
-- `social_media_hours`: Average daily time spent on social media
-- `assignment_completion_rate`: Percentage of assignments completed
-- `participation_score`: Level of student participation in class
-- `online_courses_completed`: Number of online courses completed
-- `tutoring`: Whether the student receives tutoring support
-- `math_score`: Score achieved in mathematics
-- `reading_score`: Score achieved in reading
-- `writing_score`: Score achieved in writing
-- `science_score`: Score achieved in science
-- `final_exam_score`: Score achieved in the final exam
-- `previous_gpa`: Student’s GPA from previous academic periods
-- `pass_fail`: Indicates whether the student passed or failed
-- `grade_category`: Classification of overall performance
+## Dataset Overview
 
-Dataset size:
+The dataset contains information about students' demographic background, study habits, academic behaviour, subject scores, and final exam results.
 
-- Number of rows: 10,000
-- Number of columns: 23
+The dataset includes:
 
-## 3. Data Cleaning
+- **10,000 rows**
+- **23 columns**
 
-The dataset was cleaned before analysis to ensure that the results were accurate and reliable.
+Some key variables include:
 
-The following data cleaning steps were completed:
+- student_id
+- gender
+- age
+- parental_education
+- family_income
+- internet_access
+- study_environment
+- study_hours_per_day
+- attendance_rate
+- sleep_hours
+- social_media_hours
+- assignment_completion_rate
+- participation_score
+- online_courses_completed
+- tutoring
+- math_score
+- reading_score
+- writing_score
+- science_score
+- final_exam_score
+- previous_gpa
+- pass_fail
+- grade_category
 
-- Missing values were checked across all columns.
-- No missing values were found in the dataset.
-- Duplicate rows were checked using Excel’s Remove Duplicates function.
-- No duplicate rows were found.
-- A new column called `study_group` was created to classify students into two groups:
-  - High study hours
-  - Low study hours
+The dataset includes both numerical variables and categorical variables. Numerical variables include study hours per day, attendance rate, sleep hours, subject scores, final exam score, and previous GPA. Categorical variables include gender, parental education, family income, internet access, tutoring, pass/fail status, and grade category.
 
-The `study_group` column was created based on whether a student’s daily study hours were above or below the average study hours per day.
+---
 
-After cleaning, the dataset was ready for descriptive statistics, pivot tables, charts, and insight generation.
+## Data Cleaning
 
-## 4. Descriptive Statistics
+Before doing the analysis, I checked the dataset for missing values and duplicate rows.
 
-Descriptive statistics were used to summarize the main numerical variables in the dataset, including study hours per day, attendance rate, sleep hours, social media hours, assignment completion rate, final exam score, and previous GPA.
+### Missing Values
 
-Key summary statistics:
+No missing values were found in the dataset. Therefore, no replacement or removal was required.
 
-- Average final exam score: 49.68
-- Minimum final exam score: 4.40
-- Maximum final exam score: 97.80
-- Average study hours per day: 3.02 hours
-- Average attendance rate: 84.70%
-- Average sleep hours: 7.02 hours
-- Average social media hours: 2.52 hours
-- Average previous GPA: 1.98
+### Duplicate Rows
 
-These results show that students generally had a high attendance rate, but their final exam scores varied widely.
+Duplicate rows were checked using Excel's Remove Duplicates function. No duplicate rows were found.
 
-## 5. Pivot Tables
+This means the dataset was already clean and ready for descriptive analysis, PivotTables, and charts.
 
-### Pivot Table 1: Average Final Exam Score by Internet Access
+---
 
-The first pivot table compares the average final exam score between students with and without internet access.
+## Descriptive Statistics
 
-Students with internet access achieved an average final exam score of 49.77, while students without internet access achieved an average score of 48.92.
+Descriptive statistics were used to summarize the main numerical variables, including study hours per day, attendance rate, sleep hours, social media hours, assignment completion rate, subject scores, final exam score, and previous GPA.
 
-This suggests that internet access may slightly support student learning by helping students access online resources and complete academic tasks more easily. However, the difference is small, so internet access alone may not be the strongest factor affecting exam performance.
+Some important results include:
 
-### Pivot Table 2: Average Attendance Rate by Pass/Fail Result
+| Variable | Average | Minimum | Maximum | Standard Deviation |
+|---|---:|---:|---:|---:|
+| study_hours_per_day | 3.0 | 0.5 | 7.2 | 1.2 |
+| attendance_rate | 84.7 | 50.8 | 100.0 | 9.5 |
+| sleep_hours | 7.0 | 4.0 | 10.0 | 1.0 |
+| social_media_hours | 2.5 | 0.0 | 8.0 | 1.4 |
+| assignment_completion_rate | 79.5 | 40.0 | 100.0 | 13.8 |
+| final_exam_score | 49.7 | 4.4 | 97.8 | 12.1 |
 
-The second pivot table compares the average attendance rate between students who passed and students who failed.
+The average final exam score was about **49.68**, while the average study time was about **3.02 hours per day**. The average attendance rate was **84.70%**, which shows that students generally had good attendance, but their final exam scores still varied widely.
 
-Students who passed had an average attendance rate of 85.97%, while students who failed had an average attendance rate of 83.51%.
+---
 
-This shows that students who passed generally had higher attendance than students who failed. Therefore, regular class attendance may be an important factor in academic success.
-
-### Pivot Table 3: Average Final Exam Score by Study Hours Group
-
-The third pivot table compares the average final exam score between students with high study hours and students with low study hours.
-
-Students with high study hours achieved an average final exam score of 55.29, while students with low study hours achieved an average score of 44.10.
-
-This shows that students who spent more time studying each day tended to perform better in the final exam. Therefore, consistent study habits may have a positive relationship with academic performance.
-
-### Pivot Table 4: Average Final Exam Score by Parental Education
-
-The fourth pivot table compares students’ final exam scores based on parental education level.
-
-The average final exam scores were very similar across different parental education levels. Students whose parents had a Bachelor degree achieved an average score of 49.90, while students from High School, Master, and PhD backgrounds had average scores around 49.42 to 49.79.
-
-This suggests that parental education may not be a strong factor in this dataset. Study hours and attendance appear to have a clearer relationship with student performance.
-
-## 6. Visualizations
-
-The project includes the following charts:
-
-- Average Final Exam Score by Internet Access
-- Average Attendance Rate by Pass/Fail Result
-- Average Final Exam Score by Study Hours Group
-- Average Final Exam Score by Parental Education
-
-These visualizations help compare student performance across different categories and make the insights easier to understand.
-
-### Chart 1: Average Final Exam Score by Internet Access
-
-This chart shows the difference in average final exam scores between students with and without internet access. Students with internet access achieved a slightly higher average score than students without internet access.
-
-### Chart 2: Average Attendance Rate by Pass/Fail Result
-
-This chart compares the average attendance rate of students who passed and students who failed. Students who passed had a higher average attendance rate, suggesting that regular attendance may support better academic performance.
-
-### Chart 3: Average Final Exam Score by Study Hours Group
-
-This chart shows the relationship between study hours and final exam performance. Students with high study hours had a much higher average final exam score than students with low study hours.
-
-### Chart 4: Average Final Exam Score by Parental Education
-
-This chart compares students’ final exam scores based on parental education level. The results show that the differences between groups were small, suggesting that parental education may not be the strongest factor affecting final exam performance in this dataset.
-
-## 7. Key Insights
+## Key Insights
 
 ### Insight 1: Study Hours and Final Exam Score
 
-Students with high study hours achieved an average final exam score of 55.29, while students with low study hours achieved an average score of 44.10.
+Students with high study hours achieved an average final exam score of **55.29**, while students with low study hours achieved an average score of **44.10**.
 
 This shows that students who spent more time studying each day tended to perform better in the final exam. Therefore, consistent study habits may have a positive relationship with academic success.
 
 ### Insight 2: Attendance and Pass/Fail Result
 
-Students who passed had an average attendance rate of 85.97%, while students who failed had an average attendance rate of 83.51%.
+Students who passed had an average attendance rate of **85.97%**, while students who failed had an average attendance rate of **83.51%**.
 
-This indicates that regular class attendance may be an important factor in academic success. Students who attend classes more often are more likely to understand lessons, participate in learning activities, and perform better in exams.
+This suggests that regular class attendance may support better academic performance. Students who attend classes more often may have more opportunities to understand lessons, ask questions, and prepare for exams.
 
 ### Insight 3: Internet Access and Final Exam Score
 
-Students with internet access achieved an average final exam score of 49.77, while students without internet access achieved an average score of 48.92.
+Students with internet access achieved an average final exam score of **49.77**, while students without internet access achieved an average score of **48.92**.
 
-This suggests that internet access may slightly support students’ learning by allowing them to access online materials and complete academic tasks more easily. However, the difference is small, so internet access alone may not be the strongest factor affecting exam performance.
+The difference is small, so internet access may slightly support learning, but it does not appear to be the strongest factor affecting exam performance in this dataset.
 
-### Insight 4: Parental Education and Final Exam Score
+---
 
-The average final exam scores were very similar across different parental education levels. Students whose parents had a Bachelor degree achieved an average score of 49.90, while students from High School, Master, and PhD backgrounds had average scores around 49.42 to 49.79.
+## Charts
 
-This suggests that parental education may not be a strong factor in this dataset. Study hours and attendance appear to have a clearer relationship with student performance.
+The project includes the following Excel charts:
 
-## 8. Conclusion
+1. Average Final Exam Score by Internet Access
+2. Average Attendance Rate by Pass/Fail Result
+3. Average Final Exam Score by Study Hours Group
+4. Average Final Exam Score by Parental Education
 
-Overall, the analysis shows that student exam performance is strongly related to study habits and attendance.
+These charts help visualize the relationship between student behaviour and academic performance.
 
-Students with high study hours achieved much higher final exam scores than students with low study hours. Students who passed also had a higher average attendance rate than students who failed.
+---
 
-Internet access and parental education showed smaller differences in average final exam scores. This suggests that personal study behaviour, especially daily study time and regular attendance, may be stronger factors affecting academic performance in this dataset.
+## Main Conclusion
 
-## 9. References
+Overall, the analysis shows that student exam performance is more clearly related to **study habits** and **attendance**. Students with higher study hours had much higher final exam scores, and students who passed also had higher attendance rates.
 
-GitHub Docs. (n.d.). Get started using GitHub. GitHub.  
-https://docs.github.com/en/get-started/start-your-journey
+Internet access and parental education showed smaller differences, suggesting that personal academic behaviour may be a stronger factor in student performance than background factors alone.
 
-MIS 311 dataset. (n.d.). Student Exam Performance dataset provided for MIS 311 Assignment #1.
+---
+
+## Tools Used
+
+- Microsoft Excel
+- Excel Filters
+- Remove Duplicates
+- Descriptive Statistics
+- PivotTables
+- Column Charts
+
+---
+
+## Repository Contents
+
+| File / Folder | Description |
+|---|---|
+| README.md | Project summary |
+| data/ | Student exam performance dataset |
+| charts/ | Excel charts used in the analysis |
+| report/ | Final assignment report |
+
+---
+
+## Reference
+
+Eastern International University. (2026). *MIS 311 - Introduction to Business Analytics: Assignment #1 Personal Portfolio Site* [Assignment brief].
+
+Le Thi Tuyet Nhung. (2026). *Student Exam Performance dataset for MIS 311 Assignment #1* [Unpublished Excel workbook].
